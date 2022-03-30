@@ -8,7 +8,7 @@
         <%= form_with model: @user do |f| %>
         <div class="form-group">
           <label for="user_name">Name</label>
-          <%= f.text_field :title, class: "form-control name" do %><%= book.user.name %><% end %>
+          <%= f.text_field :name, class: "form-control name" do %><%= @user.name %><% end %>
         </div>
         <div class="form-group">
           <label for="user_image">Image</label>
@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
           <label for="user_introduction">Introduction</label>
-          <%= f.text_area :body, class: "form-control introduction" %>
+          <%= f.text_area :introduction, class: "form-control introduction" %>
         </div>
         <div class="form-group">
           <%= f.submit "Update Book", class: "btn btn-secondary" %>

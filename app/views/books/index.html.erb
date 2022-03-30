@@ -1,9 +1,10 @@
 <main>
+  <%= flash[:notice] %>
   <p id="notice"></p>
   <div class="container px-5 px-sm-0">
     <div class="row">
 
-          <%= render 'list', books: @books %>
+      <%= render 'list', books: @books %>
 
           <div class="col-md-8 offset-md-1">
             <h2>Books</h2>
@@ -22,7 +23,7 @@
             <tbody>
               <% @books.each do |book| %>
               <tr>
-                <td><%= image_tag book.get_image %></td>
+                <td><%= image_tag @user.get_image %></td>
                 <td><%= link_to book_path(book.id) do %><%= book.title %><% end %></td>
                 <td><%= book.body %></td>
               </tr>
